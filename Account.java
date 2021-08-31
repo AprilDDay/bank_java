@@ -29,7 +29,7 @@ public class Account {
         }
     }
 
-    void getPreviousAmount(){
+    void getPreviousTransaction(){
         if (previousTransaction > 0){
             System.out.println("Depositied: " + previousTransaction);
         } else if (previousTransaction < 0) {
@@ -69,8 +69,57 @@ public class Account {
     }
 
     do {
-        
+        System.out.println();
+        System.out.println("Enter an option.");
+        char option1 = scanner.next().charAt(0);
+        option = Character.toUpperCase(option1);
+        System.out.println();
 
-    }
+        switch(option){
+            //A = check balance
+            case 'A':
+                System.out.println("*******************************");
+                System.out.println("Balance: $" + balance);
+                System.out.println("*******************************");
+                System.out.println();
+                break;   
+            //B = make a deposit
+            case 'B':
+                System.out.println("Enter an amount to deposit: ");
+                int amount1 = scanner.nextInt();
+                deposit(amount1);
+                System.out.println();
+                break;
+            //C = make a withdraw
+            case 'C':
+                System.out.println("Enter an amount to withdraw: ");
+                int amount2 = scanner.nextInt();
+                withdraw(amount2);
+                System.out.println();
+                break;
+            // D = view previous transaction
+            case 'D':
+                System.out.println("*******************************");
+                getPreviousTransaction();
+                System.out.println("*******************************");
+                System.out.println();
+                break;
+            // E = calc int
+            case 'E':
+                System.out.println("Enter how many years of accrued interest");
+                int years = scanner.nextInt();
+                calculateInterest(years);
+                break;
+            // F = Exit 
+            case 'F':
+                System.out.println("*******************************");
+                break;
+            //catchall for invalid option chosen by user
+            default: 
+                System.out.println("Oh! You selected an invalid option. Please section A, B, C, D, E, or F. Thank you.");
+                break;
+        }
+
+    } while (1=1); //infinit loop...
 
 }
