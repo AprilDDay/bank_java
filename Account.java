@@ -52,6 +52,8 @@ public class Account {
     //main menu
     // SEE IF YOU CAN PUT THIS IN ANOTHER CLASS
     // SEE IF YOU CAN ADD A PICK LANGUAGE OPTION BEFORE THIS...
+    // UNICODE 13.0 CHART http://www.unicode.org/charts/ 
+    // UNICODE CHART CARE OF https://stackoverflow.com/questions/19899554/unicode-range-for-japanese
     void showMenu(){
         char option = '\0';
         Scanner scanner = new Scanner(System.in);
@@ -120,6 +122,8 @@ public class Account {
                 break;
         }
 
-    } while (1=1); //infinit loop...
+    } while (option != 'F'); 
+
+    System.out.println("Thank you! See you again soon!");
 
 }
