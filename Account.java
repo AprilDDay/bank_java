@@ -49,11 +49,30 @@ public class Account {
         System.out.print("After " + years + "years, your balance will be " + newBalance);
     }
 
-    //main menu
     // SEE IF YOU CAN PUT THIS IN ANOTHER CLASS
     // SEE IF YOU CAN ADD A PICK LANGUAGE OPTION BEFORE THIS...
     // UNICODE 13.0 CHART http://www.unicode.org/charts/ 
     // UNICODE CHART CARE OF https://stackoverflow.com/questions/19899554/unicode-range-for-japanese
+    void pickLanguage(){
+        char option = '\0';
+        Scanner scanner2 = new Scanner(System.in);
+        System.out.println("Please select your language.");
+        System.out.println("A. English");
+        System.out.println("B. Spanish");
+        System.out.println("C. French");
+        System.out.println("D. Japanese");
+        System.out.println("E. Arabic");
+        System.out.println("F. Quit");
+    }
+
+    do{
+        System.out.println("Enter an option:");
+        char option0 = scanner2.next().charAt(0);
+        char option2 = Character.toUpperCase(option0);
+        //to do 
+    } while (scanner2 != F); //infinite loop
+
+    //main menu
     void showMenu(){
         char option = '\0';
         Scanner scanner = new Scanner(System.in);
@@ -73,11 +92,11 @@ public class Account {
     do {
         System.out.println();
         System.out.println("Enter an option.");
-        char option1 = scanner.next().charAt(0);
-        option = Character.toUpperCase(option1);
+        char option = scanner.next().charAt(0);
+        char option1 = Character.toUpperCase(option);
         System.out.println();
 
-        switch(option){
+        switch(option1){
             //A = check balance
             case 'A':
                 System.out.println("*******************************");
