@@ -70,6 +70,23 @@ public class Account {
         char option0 = scanner2.next().charAt(0);
         char option2 = Character.toUpperCase(option0);
         //to do 
+        switch (option2){
+            case 'A':
+            //pick English
+            //can stay as is
+            showMenu();
+            case 'B':
+            //pick Spanish
+            case 'C':
+            //pick French
+            case 'D':
+            //pick Japanese
+            case 'E':
+            //pick Arabic
+            case 'F': 
+            System.out.println("Thank you! Bye!");            
+        }
+
     } while (scanner2 != F); //infinite loop
 
     //main menu
