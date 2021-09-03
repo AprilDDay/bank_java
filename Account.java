@@ -50,7 +50,8 @@ public class Account {
     }
 
     //main menu
-    void showMenu(){
+    //static added to have Account.showMenu() in SelectLanguage class
+    static void showMenu(){
         char option = '\0';
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome, " + customerName + "!");
